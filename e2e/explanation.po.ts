@@ -35,12 +35,8 @@ export class Explanation {
     return browser.get('/');
   }
 
-  public setUserName(user: string): void {
-    this._username.sendKeys(user);
-  }
-
-  public setPasswordName(passwordUser: string): void {
-    this._password.sendKeys(passwordUser);
+  public sleepPageObecjt(): void {
+    browser.sleep(DATA_CONSTANT.SLEEP);
   }
 
   public sendLoginButton(): void {
@@ -92,8 +88,12 @@ export class Explanation {
     this._explanationContent.sendKeys(textExplanations);
   }
 
-  public sleepPageObecjt(): void {
-    browser.sleep(DATA_CONSTANT.SLEEP);
+  public setUserName(user: string): void {
+    this._username.sendKeys(user);
+  }
+
+  public setPasswordName(passwordUser: string): void {
+    this._password.sendKeys(passwordUser);
   }
 
   public getTitleExplanation(): any {

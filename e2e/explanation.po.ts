@@ -1,107 +1,111 @@
+/**
+ * @author Boris Perez
+ */
+
 import {browser, by, element} from 'protractor';
-import {EXPLANATION_CONSTANT} from "./explanation.constant";
+import {DATA_CONSTANT, HTML_ELEMENT} from "./explanation.constant";
 
 export class Explanation {
 
   /* LOGIN PAGE */
-  private username = element(by.id('username'));
-  private password = element(by.id('password'));
-  private loginButton = element(by.buttonText('Login'));
+  private _username = element(by.id(HTML_ELEMENT.LOGIN.USERNAME_FIELD));
+  private _password = element(by.id(HTML_ELEMENT.LOGIN.PASSWORD_FIELD));
+  private _loginButton = element(by.buttonText(HTML_ELEMENT.LOGIN.SUBMIT_BUTTON));
 
   /* FIELD SHORTCUT */
-  private field = element(by.css('body > app-root > showcase-form > article > section > div:nth-child(1) > section > div.showcase-form-input-container.showcase-form-line-input-group > input'));
-  private openExplanation = element(by.id('explanation-icon'));
+  private _field = element(by.id(HTML_ELEMENT.FIELD_SHORTCUT.FIRST_FIELD));
+  private _openExplanation = element(by.id(HTML_ELEMENT.FIELD_SHORTCUT.EXPLANATION_ICON));
 
   /* EXPLANATION POPOVER */
-  private newExplanation = element(by.id('explanation-new'));
-  private explanationContent = element(by.id('explanation-content'));
-  private cancelExplanation = element(by.id('explanation-cancel'));
-  private saveExplanation = element(by.id('explanation-save'));
-  private editExplanation = element(by.id('explanation-edit'));
-  private deleteExplanation = element(by.id('explanation-delete'));
-  private previousExplanation = element(by.id('explanation-previous'));
-  private nextExplanation = element(by.id('explanation-next'));
-  private titleExplanation = element(by.id('Explanations'));
+  private _newExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_NEW));
+  private _explanationContent = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_CONTENT));
+  private _cancelExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_CANCEL));
+  private _saveExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_SAVE));
+  private _editExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_EDIT));
+  private _deleteExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_DELETE));
+  private _previousExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_PREVIOUS));
+  private _nextExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_NEXT));
+  private _titleExplanation = element(by.id(HTML_ELEMENT.EXPLANATION_POPOVER.EXPLANATION_TITLE));
 
   /* LUCY ALERT */
-  private alert = element(by.css('section > scc-alert-lucy > article > section.scc-alert-lucy-center-section.scc-ui-scroll-container > p'));
+  private _alert = element(by.css(HTML_ELEMENT.LUCY_ALERT));
 
 
   public get(): any {
     return browser.get('/');
   }
 
-  public setUserName (user: string): void {
-    this.username.sendKeys(user);
+  public setUserName(user: string): void {
+    this._username.sendKeys(user);
   }
 
-  public setPasswordName (passwordUser: string): void {
-    this.password.sendKeys(passwordUser);
+  public setPasswordName(passwordUser: string): void {
+    this._password.sendKeys(passwordUser);
   }
 
-  public sendLoginButton (): void {
-    this.loginButton.click();
+  public sendLoginButton(): void {
+    this._loginButton.click();
   }
 
-  public selectField (): void {
-    this.field.click ();
+  public selectField(): void {
+    this._field.click();
   }
 
-  public openExplanations (): void {
-    this.openExplanation.click();
+  public openExplanations(): void {
+    this._openExplanation.click();
   }
 
-  public clickNewExplanations (): void {
-    this.newExplanation.click();
+  public clickNewExplanations(): void {
+    this._newExplanation.click();
   }
 
-  public clickSaveExplanations (): void {
-    this.saveExplanation.click();
+  public clickSaveExplanations(): void {
+    this._saveExplanation.click();
   }
 
-  public clickEditExplanations (): void {
-    this.editExplanation.click();
-    this.explanationContent.clear();
+  public clickEditExplanations(): void {
+    this._editExplanation.click();
+    this._explanationContent.clear();
   }
 
-  public clickDeleteExplanations (): void {
-    this.deleteExplanation.click();
+  public clickDeleteExplanations(): void {
+    this._deleteExplanation.click();
   }
 
-  public clickNextExplanations (): void {
-    this.nextExplanation.click();
+  public clickNextExplanations(): void {
+    this._nextExplanation.click();
   }
 
-  public clickPreviosExplanations (): void {
-    this.previousExplanation.click();
+  public clickPreviosExplanations(): void {
+    this._previousExplanation.click();
   }
 
-  public clickCancelExplanations (): void {
-    this.cancelExplanation.click();
+  public clickCancelExplanations(): void {
+    this._cancelExplanation.click();
   }
 
-  public writteNewExplanations (textExplanations: string): void {
-    this.explanationContent.sendKeys(textExplanations);
+  public writteNewExplanations(textExplanations: string): void {
+    this._explanationContent.sendKeys(textExplanations);
   }
 
-  public editExplanations (textExplanations: string): void {
-    this.explanationContent.sendKeys(textExplanations);
+  public editExplanations(textExplanations: string): void {
+    this._explanationContent.sendKeys(textExplanations);
   }
 
-  public sleepPageObecjt (): void {
-    browser.sleep(EXPLANATION_CONSTANT.SLEEP);
+  public sleepPageObecjt(): void {
+    browser.sleep(DATA_CONSTANT.SLEEP);
   }
 
-  public getTitleExplanation (): any {
-    return this.titleExplanation.getText();
+  public getTitleExplanation(): any {
+    return this._titleExplanation.getText();
   }
 
-  public getContent (): any {
-    return this.explanationContent.getText();
+  public getContent(): any {
+    return this._explanationContent.getText();
   }
 
-  public getContentAlert (): any {
-    return this.alert.getText();
+  public getContentAlert(): any {
+    return this._alert.getText();
   }
 }
 

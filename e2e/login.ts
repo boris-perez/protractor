@@ -3,11 +3,11 @@
  */
 
 import {Explanation} from './explanation.po';
-import {EXPLANATION_CONSTANT} from "./explanation.constant";
+import {DATA_CONSTANT} from "./explanation.constant";
 
 const login = new Explanation();
-const email = EXPLANATION_CONSTANT.EMAIL;
-const password = EXPLANATION_CONSTANT.PASSWORD;
+const email = DATA_CONSTANT.EMAIL;
+const password = DATA_CONSTANT.PASSWORD;
 
 describe('Login option', () => {
 

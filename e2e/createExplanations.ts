@@ -3,12 +3,12 @@
  */
 
 import {Explanation} from './explanation.po';
-import {EXPLANATION_CONSTANT} from "./explanation.constant";
+import {DATA_CONSTANT} from "./explanation.constant";
 
 const createExplanation = new Explanation();
-const newExplanation = EXPLANATION_CONSTANT.NEW_EXPLANATION;
-const titleExplanation = EXPLANATION_CONSTANT.TITLE_EXPLANATION;
-const createAlert = EXPLANATION_CONSTANT.CREATE_EXPLANATION;
+const newExplanation = DATA_CONSTANT.NEW_EXPLANATION;
+const titleExplanation = DATA_CONSTANT.TITLE_EXPLANATION;
+const createAlert = DATA_CONSTANT.CREATE_EXPLANATION;
 
 describe('Protractor Write and Save and Explanations', () => {
 

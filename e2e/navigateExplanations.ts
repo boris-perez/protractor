@@ -3,11 +3,11 @@
  */
 
 import {Explanation} from './explanation.po';
-import {EXPLANATION_CONSTANT} from "./explanation.constant";
+import {DATA_CONSTANT} from "./explanation.constant";
 
 const navigate = new Explanation();
-const newExplanation = EXPLANATION_CONSTANT.NEW_EXPLANATION;
-const createAlert = EXPLANATION_CONSTANT.CREATE_EXPLANATION;
+const newExplanation = DATA_CONSTANT.NEW_EXPLANATION;
+const createAlert = DATA_CONSTANT.CREATE_EXPLANATION;
 
 
 describe('Protractor Navigate Explanations', () => {
@@ -20,6 +20,7 @@ describe('Protractor Navigate Explanations', () => {
       navigate.writteNewExplanations(newExplanation);
       navigate.clickSaveExplanations();
     });
+    navigate.sleepPageObecjt();
     expect(navigate.getContentAlert()).toBe(createAlert);
   });
 

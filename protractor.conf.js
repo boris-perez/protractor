@@ -2,7 +2,8 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
-const { AwesomeReport } = require('jasmine-awesome-report');
+const {AwesomeReport} = require('jasmine-awesome-report');
+const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 
 const config = {
   fullPath: 'awesome-report',
@@ -10,13 +11,18 @@ const config = {
   merge: true
 };
 
+const reporter = new HtmlScreenshotReporter({
+  dest: 'automation-report/screenshots'
+  , filename: 'social-explanation-report.html'
+});
+
 exports.config = {
   specs: [
-    './e2e/**/login.ts',
-    './e2e/**/createExplanations.ts',
-    './e2e/**/editExplanations.ts',
-    './e2e/**/navigateExplanations.ts',
-    './e2e/**/deleteExplanations.ts'
+    './e2e/login.ts',
+    './e2e/createExplanations.ts',
+    './e2e/editExplanations.ts',
+    './e2e/navigateExplanations.ts',
+    './e2e/deleteExplanations.ts'
   ],
   capabilities: {
     'browserName': 'chrome',
@@ -31,6 +37,18 @@ exports.config = {
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
 
+  beforeLaunch: function () {
+    return new Promise(function (resolve) {
+      reporter.beforeLaunch(resolve);
+    });
+  },
+
+  afterLaunch: function (exitCode) {
+    return new Promise(function (resolve) {
+      reporter.afterLaunch(resolve.bind(this, exitCode));
+    });
+  },
+
   onPrepare: function () {
     browser.manage().timeouts().implicitlyWait(4000);
     browser.ignoreSynchronization = true;
@@ -39,5 +57,9 @@ exports.config = {
     });
     jasmine.getEnv().addReporter(new SpecReporter({spec: {displayStacktrace: true}}));
     jasmine.getEnv().addReporter(AwesomeReport.getReport(config));
+    jasmine.getEnv().addReporter(reporter);
+    afterAll(function (done) {
+      process.nextTick(done);
+    })
   }
 };

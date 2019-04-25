@@ -12,14 +12,11 @@ describe('Protractor Edit Explanations', () => {
 
   it('Should select Edit Explanation option', () => {
     editExplanation.clickEditExplanations();
-    editExplanation.sleepPageObecjt();
   });
 
   it('Should Edit the Explanation', () => {
     editExplanation.editExplanations(editExplanations);
-    editExplanation.sleepPageObecjt();
     editExplanation.clickSaveExplanations();
-    editExplanation.sleepPageObecjt();
     expect(editExplanation.getContentAlert()).toBe(alertEdit);
   });
 });

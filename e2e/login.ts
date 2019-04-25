@@ -15,11 +15,9 @@ describe('Login option', () => {
     login.get();
     login.setUserName(email);
     login.setPasswordName(password);
-    login.sleepPageObecjt();
   });
 
   it('should select login option', async () => {
     login.sendLoginButton();
-    login.sleepPageObecjt();
   });
 });

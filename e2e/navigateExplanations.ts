@@ -19,7 +19,6 @@ describe('Protractor Navigate Explanations', () => {
       }
       navigate.writteNewExplanations(newExplanation);
       navigate.clickSaveExplanations();
-      navigate.sleepPageObecjt();
     });
     expect(navigate.getContentAlert()).toBe(createAlert);
   });

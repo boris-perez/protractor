@@ -10,9 +10,7 @@ describe('Delete Explanations', () => {
   const deleteAlert = EXPLANATION_CONSTANT.REMOVE_EXPLANATION;
 
   it('Should delete the explanation', () => {
-    deletedExplanation.sleepPageObecjt();
     deletedExplanation.clickDeleteExplanations();
-    deletedExplanation.sleepPageObecjt();
     expect(deletedExplanation.getContentAlert()).toBe(deleteAlert);
   });
 });

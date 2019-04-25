@@ -14,13 +14,11 @@ describe('Protractor Write and Save and Explanations', () => {
 
   it('Should select a field', () => {
     createExplanation.selectField();
-    createExplanation.sleepPageObecjt();
   });
 
   it('Should open an explanations', () => {
     createExplanation.openExplanations();
-    createExplanation.sleepPageObecjt();
-    expect(createExplanation.getTitleExplanation()).toEqual(titleExplanation);
+    expect(createExplanation.getTitleExplanation()).toBe(titleExplanation);
   });
 
   it('Should write an explanation', () => {
@@ -29,13 +27,11 @@ describe('Protractor Write and Save and Explanations', () => {
         createExplanation.clickNewExplanations();
       }
       createExplanation.writteNewExplanations(newExplanation);
-      createExplanation.sleepPageObecjt();
     });
   });
 
   it('Should save explanation', () => {
     createExplanation.clickSaveExplanations();
-    createExplanation.sleepPageObecjt();
     expect(createExplanation.getContentAlert()).toBe(createAlert);
   });
 });
@@ -48,13 +44,11 @@ describe('Protractor Write and Cancel an Explanations', () => {
         createExplanation.clickNewExplanations();
       }
       createExplanation.writteNewExplanations(newExplanation);
-      createExplanation.sleepPageObecjt();
     });
   });
 
   it('Should cancel explanation', () => {
     createExplanation.clickCancelExplanations();
-    createExplanation.sleepPageObecjt();
     expect(createExplanation.getContent()).toEqual(createExplanation.getContent())
   });
 });

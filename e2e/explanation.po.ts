@@ -3,7 +3,7 @@
  */
 
 import {browser, by, element} from 'protractor';
-import {DATA_CONSTANT, HTML_ELEMENT} from "./explanation.constant";
+import {DATA_CONSTANT, HTML_ELEMENT} from './explanation.constant';
 
 export class Explanation {
 
@@ -35,8 +35,8 @@ export class Explanation {
     return browser.get('/');
   }
 
-  public sleepPageObecjt(): void {
-    browser.sleep(DATA_CONSTANT.SLEEP);
+  public sleepPageObject(): void {
+    browser.sleep(DATA_CONSTANT.SLEEP_NAVIGATION);
   }
 
   public sendLoginButton(): void {
@@ -72,7 +72,7 @@ export class Explanation {
     this._nextExplanation.click();
   }
 
-  public clickPreviosExplanations(): void {
+  public clickPreviousExplanations(): void {
     this._previousExplanation.click();
   }
 
@@ -80,7 +80,7 @@ export class Explanation {
     this._cancelExplanation.click();
   }
 
-  public writteNewExplanations(textExplanations: string): void {
+  public writeNewExplanations(textExplanations: string): void {
     this._explanationContent.sendKeys(textExplanations);
   }
 

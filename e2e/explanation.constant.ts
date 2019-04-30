@@ -10,7 +10,7 @@ export const DATA_CONSTANT = {
   UPDATE_EXPLANATION: 'Your item was updated',
   REMOVE_EXPLANATION: 'Your item was deleted, to recover it go to the Recover Section',
   TITLE_EXPLANATION: 'Explanations',
-  SLEEP: 3000,
+  SLEEP_NAVIGATION: 3000
 
 };
 
@@ -22,7 +22,7 @@ export const HTML_ELEMENT = {
   },
   FIELD_SHORTCUT: {
     FIRST_FIELD: 'First name',
-    EXPLANATION_ICON: 'explanation-icon',
+    EXPLANATION_ICON: 'explanation-icon'
   },
   EXPLANATION_POPOVER: {
     EXPLANATION_NEW: 'explanation-new',
@@ -33,9 +33,9 @@ export const HTML_ELEMENT = {
     EXPLANATION_DELETE: 'explanation-delete',
     EXPLANATION_PREVIOUS: 'explanation-previous',
     EXPLANATION_NEXT: 'explanation-next',
-    EXPLANATION_TITLE: 'Explanations',
+    EXPLANATION_TITLE: 'explanations'
   },
-  LUCY_ALERT: 'section > scc-alert-lucy > article > section.scc-alert-lucy-center-section.scc-ui-scroll-container > p ',
+  LUCY_ALERT: 'section > scc-alert-lucy > article > section.scc-alert-lucy-center-section.scc-ui-scroll-container > p '
 };
 
 

@@ -1,0 +1,39 @@
+/**
+ * @author Boris Perez
+ */
+export const DATA_CONSTANT = {
+  NAME_CHAT: 'group conversation',
+  MESSAGE1: 'hello from protractor',
+  MESSAGE2: 'hello world..!!',
+  EMAIL1: 'ricardo@gmail.com',
+  SLEEP_NAVIGATION: 3000
+};
+
+export const HTML_ELEMENT = {
+  FIELD_SHORTCUT: {
+    FIRST_FIELD: 'body > app-root > showcase-form > article > article.container.showcase-form-container1 > section.showcase-form-body-center > section.showcase-form-center.showcase-form-main-content.ng-star-inserted > div:nth-child(1) > section > div.showcase-form-input-container.showcase-form-line-input-group > input',
+    CHAT_ICON: 'button.scc-ui-link-icon.chat-icon-link.chat-icon-link-basic-new-dark1'
+  },
+  CHAT_POPOVER: {
+    CHAT_NEW: 'button.scc-ui-link-icon.scc-ui-link-good-new.chat-icon-detail-action-hover.ng-star-inserted',
+    CHAT_SELECT_CONTACT: 'label.scc-ui-txt.scc-ui-txt-bold-medium.scc-ui-txt-notice.scc-ui-txt-capitalize.scc-ui-txt-ellipsis.chat-create-conversation-item-text',
+    CHAT_SKIP: 'button.scc-ui-link.scc-ui-link-good-new.chat-group-icon-detail-text-action-hover.ng-star-inserted',
+    CHAT_CREATE: 'button.scc-ui-link.scc-ui-link-good-new.chat-group-icon-detail-text-action-hover.ng-star-inserted',
+    CHAT_BACK: 'button.scc-ui-link-icon.scc-ui-link-good-new.chat-icon-detail-link-back',
+    CHAT_NEXT: 'button.scc-ui-link.scc-ui-link-good-new.chat-group-icon-detail-text-action-hover.ng-star-inserted',
+    CHAT_SEARCH_INPUT: 'article > textarea',
+    CHAT_NAME:'section > input',
+    CHAT_SELECT_CONVERSATION: 'section.chat-conversation-item-center-panel',
+    CHAT_MESSAGE_INPUT: 'chat-text-area',
+    CHAT_SEND_MESSAGE:'span.scc-ui-font.scc-ui-font-1x.scc-ui-icon-mock-sent',
+    CHAT_MESSAGE_OPTIONS: 'section.chat-message-item-content.chat-message-item-content-arrow-right-good-new-light3',
+    CHAT_EDIT_OPTIONS: 'button.scc-ui-link.scc-ui-link-preset.ng-star-inserted',
+    CHAT_DELETE_OPTION: 'button.scc-ui-link.scc-ui-link-preset.chat-message-item-menu-option.ng-star-inserted',
+    CHAT_REPLY_OPTION: 'button.scc-ui-link.scc-ui-link-preset',
+
+  },
+  LUCY_ALERT: 'section > scc-alert-lucy > article > section.scc-alert-lucy-center-section.scc-ui-scroll-container > p '
+};
+
+
+

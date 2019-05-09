@@ -12,17 +12,32 @@ const config = {
 };
 
 const reporter = new HtmlScreenshotReporter({
-  dest: 'automation-report/screenshots'
+    dest: 'automation-report/screenshots'
   , filename: 'social-explanation-report.html'
 });
 
 exports.config = {
   specs: [
-    './e2e/login.ts',
-    './e2e/createExplanations.ts',
-    './e2e/editExplanations.ts',
-    './e2e/navigateExplanations.ts',
-    './e2e/deleteExplanations.ts'
+    //login
+    './e2e/login/login.e2e-spec.ts',
+
+    //social-chat
+    './e2e/social-chat/create-individualChat.e2e-spec.ts',
+    './e2e/social-chat/create-groupChat.e2e-spec.ts',
+    './e2e/social-chat/send-message.e2e-spec.ts',
+    //'./e2e/social-chat/edit-message.e2e-spec.ts'
+
+    //logout and login
+    './e2e/login/login1.e2e-spec.ts',
+
+    './e2e/social-chat/enter-groupChat.e2e-spec.ts'
+
+
+    //social-explanation
+    // './e2e/social-explanation/createExplanations.e2e-spec.ts',
+    // './e2e/social-explanation/editExplanations.e2e-spec.ts',
+    // './e2e/social-explanation/navigateExplanations.e2e-spec.ts',
+    // './e2e/social-explanation/deleteExplanations.e2e-spec.ts'
   ],
   capabilities: {
     'browserName': 'chrome',
@@ -34,7 +49,7 @@ exports.config = {
   },
 
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  baseUrl: 'http://localhost:4200/',
+  baseUrl: 'http://172.16.4.88:8000/',
   framework: 'jasmine',
 
   beforeLaunch: function () {

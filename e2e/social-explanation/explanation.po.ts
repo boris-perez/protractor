@@ -7,11 +7,6 @@ import {DATA_CONSTANT, HTML_ELEMENT} from './explanation.constant';
 
 export class Explanation {
 
-  /* LOGIN PAGE */
-  private _username = element(by.id(HTML_ELEMENT.LOGIN.USERNAME_FIELD));
-  private _password = element(by.id(HTML_ELEMENT.LOGIN.PASSWORD_FIELD));
-  private _loginButton = element(by.buttonText(HTML_ELEMENT.LOGIN.SUBMIT_BUTTON));
-
   /* FIELD SHORTCUT */
   private _field = element(by.id(HTML_ELEMENT.FIELD_SHORTCUT.FIRST_FIELD));
   private _openExplanation = element(by.id(HTML_ELEMENT.FIELD_SHORTCUT.EXPLANATION_ICON));
@@ -31,16 +26,8 @@ export class Explanation {
   private _alert = element(by.css(HTML_ELEMENT.LUCY_ALERT));
 
 
-  public get(): any {
-    return browser.get('/');
-  }
-
   public sleepPageObject(): void {
     browser.sleep(DATA_CONSTANT.SLEEP_NAVIGATION);
-  }
-
-  public sendLoginButton(): void {
-    this._loginButton.click();
   }
 
   public selectField(): void {
@@ -86,14 +73,6 @@ export class Explanation {
 
   public editExplanations(textExplanations: string): void {
     this._explanationContent.sendKeys(textExplanations);
-  }
-
-  public setUserName(user: string): void {
-    this._username.sendKeys(user);
-  }
-
-  public setPasswordName(passwordUser: string): void {
-    this._password.sendKeys(passwordUser);
   }
 
   public getTitleExplanation(): any {

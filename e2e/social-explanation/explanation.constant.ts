@@ -2,8 +2,6 @@
  * @author Boris Perez
  */
 export const DATA_CONSTANT = {
-  EMAIL: 'omar@gmail.com',
-  PASSWORD: 'Password1!',
   NEW_EXPLANATION: 'New explanation',
   EDIT_EXPLANATION: 'Edit explanation',
   CREATE_EXPLANATION: 'Your item was created',
@@ -15,11 +13,6 @@ export const DATA_CONSTANT = {
 };
 
 export const HTML_ELEMENT = {
-  LOGIN: {
-    USERNAME_FIELD: 'username',
-    PASSWORD_FIELD: 'password',
-    SUBMIT_BUTTON: 'Login'
-  },
   FIELD_SHORTCUT: {
     FIRST_FIELD: 'First name',
     EXPLANATION_ICON: 'explanation-icon'

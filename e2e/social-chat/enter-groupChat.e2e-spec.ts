@@ -8,10 +8,11 @@ import {DATA_CONSTANT} from './chat.constant';
 const chat = new Chat();
 const message = DATA_CONSTANT.MESSAGE2;
 
-describe('Protractor create group conversation', () => {
+describe('Protractor Enter group chat', () => {
 
   it('Should select a field', () => {
     chat.selectField();
+    chat.sleepPageObject();
   });
 
   it('Should open chat icon', () => {
@@ -20,11 +21,14 @@ describe('Protractor create group conversation', () => {
   });
 
   it('Should select a conversation', () => {
+    chat.sleepPageObject();
     chat.clickSelectConversation();
+    chat.sleepPageObject();
   });
 
   it('Should write a message', () => {
     chat.writeMessageInput(message);
+    chat.sleepPageObject()
   });
 
   it('Should send a message', () => {
@@ -32,4 +36,8 @@ describe('Protractor create group conversation', () => {
     chat.sleepPageObject()
   });
 
+  it('Should go to list conversation', () => {
+    chat.clickBackChat();
+    chat.sleepPageObject()
+  });
 });

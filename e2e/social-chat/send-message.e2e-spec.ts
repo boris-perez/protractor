@@ -22,4 +22,9 @@ describe('Protractor send a message', () => {
     chat.clickSendMessage();
     chat.sleepPageObject()
   });
+
+  it('Should go to list conversation', () => {
+    chat.clickBackChat();
+    chat.sleepPageObject()
+  });
 });

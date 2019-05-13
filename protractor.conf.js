@@ -25,12 +25,19 @@ exports.config = {
     './e2e/social-chat/create-individualChat.e2e-spec.ts',
     './e2e/social-chat/create-groupChat.e2e-spec.ts',
     './e2e/social-chat/send-message.e2e-spec.ts',
+    './e2e/social-chat/change-privacy.e2e-spec.ts',
+    './e2e/social-chat/add-participant.e2e-spec.ts',
+    './e2e/social-chat/remove-participant.e2e-spec.ts',
+
     //'./e2e/social-chat/edit-message.e2e-spec.ts'
 
     //logout and login
     './e2e/login/login1.e2e-spec.ts',
 
-    './e2e/social-chat/enter-groupChat.e2e-spec.ts'
+    './e2e/social-chat/enter-groupChat.e2e-spec.ts',
+    './e2e/social-chat/mute-conversation.e2e-spec.ts',
+    './e2e/social-chat/add-participant-list-conversation.e2e-spec.ts',
+    './e2e/social-chat/left-conversation.e2e-spec.ts',
 
 
     //social-explanation

@@ -27,6 +27,17 @@ export class Chat {
   private _editMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_EDIT_OPTIONS));
   private _deleteMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_DELETE_OPTION));
   private _replyMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REPLY_OPTION));
+  private _arrowLeft = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ARROW_LEFT));
+  private _arrowRight = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ARROW_RIGHT));
+  private _privacy = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_PRIVACY));
+  private _mute = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MUTE));
+  private _addParticipantListConversation = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD_PARTICIPANT));
+  private _addParticipant = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD_PARTICIPANT1));
+  private _addOption = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD));
+  private _leftOption = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_LEFT));
+  private _removeOption = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REMOVE_USER));
+  private _removeUser = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REMOVE));
+  private _nameConversation = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NAME_CONVERSATION));
 
 
 
@@ -84,6 +95,53 @@ export class Chat {
   public clickEditMessage(): void {
     this._editMessage.click();
     this._messageInput.clear();
+  }
+
+  public clickArrowRight(): void{
+    browser.actions().mouseMove(this._selectConversation).perform();
+    this._arrowRight.click();
+  }
+
+  public clickArrowLeft(): void{
+    browser.actions().mouseMove(this._selectConversation).perform();
+    this._arrowLeft.click();
+  }
+
+  public clickArrowRightRemove(): void{
+    browser.actions().mouseMove(this._removeOption).perform();
+    this._arrowRight.click();
+  }
+
+  public clickRemoveOption(): void{
+   this._removeUser.click();
+  }
+
+  public clickPrivacy(): void {
+    this._privacy.click();
+  }
+
+  public clickMute(): void {
+    this._mute.click();
+  }
+
+  public clickAddParticipantListConversation(): void {
+    this._addParticipantListConversation.click();
+  }
+
+  public clickAdd(): void {
+    this._addOption.click();
+  }
+
+  public clickLeftOption(): void {
+    this._leftOption.click();
+  }
+
+  public clickNameConversation(): void {
+    this._nameConversation.click();
+  }
+
+  public clickAddParticipant(): void {
+    this._addParticipant.click();
   }
 
   public clickDeleteMessage(): void {

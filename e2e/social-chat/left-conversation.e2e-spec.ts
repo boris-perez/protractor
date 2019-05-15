@@ -6,18 +6,20 @@ import {Chat} from './chat.po';
 import {DATA_CONSTANT} from "./chat.constant";
 
 const chat = new Chat();
-const message = DATA_CONSTANT.MESSAGE1;
+const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 
 describe('Protractor left conversation', () => {
 
   it('Should conversation options', () => {
     chat.clickArrowRight();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should left conversation', () => {
     chat.clickLeftOption();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
 });

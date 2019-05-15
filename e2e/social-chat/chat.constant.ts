@@ -6,7 +6,9 @@ export const DATA_CONSTANT = {
   MESSAGE1: 'hello from protractor',
   MESSAGE2: 'hello world..!!',
   EMAIL1: 'ricardo@gmail.com',
-  SLEEP_NAVIGATION: 3000
+  SLEEP_NAVIGATION: 3000,
+  TITLE: 'Info. of the group',
+  TITLE_CHAT: 'Chat',
 };
 
 export const HTML_ELEMENT = {
@@ -40,7 +42,9 @@ export const HTML_ELEMENT = {
     CHAT_ADD: 'button.scc-ui-link.scc-ui-link-good-new.chat-icon-detail-text-action-hover.ng-star-inserted',
     CHAT_LEFT:'button.scc-ui-link-icon.scc-ui-link-basic-new-dark1.chat-conversation-menu-link',
     CHAT_REMOVE_USER:'div:nth-child(3) > chat-conversation-participants-item-with-menu > chat-slide-menu',
-    CHAT_REMOVE:'div:nth-child(3) > chat-conversation-participants-item-with-menu > chat-slide-menu > div > div:nth-child(2) > chat-conversation-menu > article > section > button > span'
+    CHAT_REMOVE:'div:nth-child(3) > chat-conversation-participants-item-with-menu > chat-slide-menu > div > div:nth-child(2) > chat-conversation-menu > article > section > button > span',
+    TITLE_CHAT: 'section.chat-icon-detail-title > div > label',
+    TITLE: 'section.chat-icon-detail-title > div > label',
   },
   LUCY_ALERT: 'section > scc-alert-lucy > article > section.scc-alert-lucy-center-section.scc-ui-scroll-container > p '
 };

@@ -38,8 +38,8 @@ export class Chat {
   private _removeOption = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REMOVE_USER));
   private _removeUser = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REMOVE));
   private _nameConversation = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NAME_CONVERSATION));
-
-
+  private _infoGroup = element(by.css(HTML_ELEMENT.CHAT_POPOVER.TITLE));
+  private _tileChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.TITLE_CHAT));
 
   /* LUCY ALERT */
   private _alert = element(by.css(HTML_ELEMENT.LUCY_ALERT));
@@ -152,10 +152,6 @@ export class Chat {
     this._replyMessage.click();
   }
 
-  public clickSearchContact(): void {
-    this._searchContactChat.sendKeys();
-  }
-
   public clickNameChat(): void {
       this._searchContactChat.sendKeys();
   }
@@ -170,6 +166,18 @@ export class Chat {
 
   public writeMessageInput(text: string): void {
     this._messageInput.sendKeys(text);
+  }
+
+  public messageInput () : any {
+    return this._messageInput.getText();
+  }
+
+  public getInfoGroup () : any {
+    return this._infoGroup.getText();
+  }
+
+  public getTitleChat () : any {
+    return this._tileChat.getText();
   }
 
   public getContentAlert(): any {

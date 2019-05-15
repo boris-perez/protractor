@@ -3,33 +3,40 @@
  */
 
 import {Chat} from './chat.po';
+import {DATA_CONSTANT} from "./chat.constant";
 
 const chat = new Chat();
+const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 
 describe('Protractor Add participant', () => {
 
   it('Should conversation options', () => {
     chat.clickArrowRight();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should Select add participant', () => {
     chat.clickAddParticipantListConversation();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should select a contact', () => {
     chat.clickSelectContact();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should select add option', () => {
     chat.clickAdd();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.messageInput()).toBe("");
   });
 
   it('Should go to list conversation', () => {
     chat.clickBackChat();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 });

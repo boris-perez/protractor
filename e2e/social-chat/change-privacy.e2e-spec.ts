@@ -6,21 +6,25 @@ import {Chat} from './chat.po';
 import {DATA_CONSTANT} from "./chat.constant";
 
 const chat = new Chat();
+const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 
 describe('Change of privacy', () => {
 
   it('Should conversation options', () => {
     chat.clickArrowRight();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should change the privacy', () => {
     chat.clickPrivacy();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should close conversation options', () => {
     chat.clickArrowLeft();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 });

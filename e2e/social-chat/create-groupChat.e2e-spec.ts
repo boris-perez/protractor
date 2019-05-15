@@ -9,39 +9,49 @@ import {DATA_CONSTANT} from './chat.constant';
 const chat = new Chat();
 const chatContact = DATA_CONSTANT.EMAIL1;
 const nameChat = DATA_CONSTANT.NAME_CHAT;
+const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 
 describe('Protractor create group conversation', () => {
 
   it('Should select new chat', () => {
     chat.clickNewChat();
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should search a contact', () => {
     chat.searchContactChat(chatContact);
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should select a contact', () => {
     chat.clickSelectContact();
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
-  it('Should create group conversation', () => {
+  it('Should select next option', () => {
     chat.clickNextChat();
-    // expect(chat.getTitleExplanation()).toBe(titleExplanation);
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should put a name of conversation', () => {
     chat.nameChat(nameChat);
-    // expect(chat.getTitleExplanation()).toBe(titleExplanation);
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should select the create option', () => {
     chat.clickCreateChat();
-    chat.sleepPageObject()
-     // expect(chat.getTitleExplanation()).toBe(titleExplanation);
+    chat.sleepPageObject();
+    expect(chat.messageInput()).toBe("");
   });
   it('Should go to list conversation', () => {
     chat.clickBackChat();
-    chat.sleepPageObject()
+    chat.sleepPageObject();
+    expect(chat.getTitleChat()).toBe(titleChat);
   });
 
 });

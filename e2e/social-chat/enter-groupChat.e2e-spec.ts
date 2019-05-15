@@ -23,7 +23,7 @@ describe('Protractor Enter group chat', () => {
   });
 
   it('Should select a conversation', () => {
-    chat.sleepPageObject();
+    // chat.sleepPageObject();
     chat.clickSelectConversation();
     chat.sleepPageObject();
     expect(chat.messageInput()).toBe("");

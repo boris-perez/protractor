@@ -16,7 +16,6 @@ describe('Protractor create an individual chat', () => {
 
   it('Should open chat icon', () => {
     chat.openChat();
-    chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
 

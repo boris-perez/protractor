@@ -21,6 +21,8 @@ exports.config = {
     //login
     './e2e/login/login.e2e-spec.ts',
 
+
+
     //social-chat
     './e2e/social-chat/create-individualChat.e2e-spec.ts',
     './e2e/social-chat/create-groupChat.e2e-spec.ts',
@@ -72,7 +74,7 @@ exports.config = {
   },
 
   onPrepare: function () {
-    browser.manage().timeouts().implicitlyWait(4000);
+    browser.manage().timeouts().implicitlyWait(6000);
     browser.ignoreSynchronization = true;
     require('ts-node').register({
       project: 'e2e/tsconfig.e2e.json'

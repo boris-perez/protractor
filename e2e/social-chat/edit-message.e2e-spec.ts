@@ -19,6 +19,6 @@ describe('Protractor Edit Message', () => {
     chat.writeMessageInput(message);
     chat.clickSendMessage();
     chat.sleepPageObject();
-   // expect(chat.getContentAlert()).toBe(alertEdit);
+  // expect(chat.getContentAlert()).toBe(alertEdit);
   });
 });

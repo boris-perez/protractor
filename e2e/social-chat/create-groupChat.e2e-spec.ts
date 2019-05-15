@@ -15,31 +15,31 @@ describe('Protractor create group conversation', () => {
 
   it('Should select new chat', () => {
     chat.clickNewChat();
-    chat.sleepPageObject();
+    // chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should search a contact', () => {
     chat.searchContactChat(chatContact);
-    chat.sleepPageObject();
+    // chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should select a contact', () => {
     chat.clickSelectContact();
-    chat.sleepPageObject();
+    // chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should select next option', () => {
     chat.clickNextChat();
-    chat.sleepPageObject();
+    // chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
 
   it('Should put a name of conversation', () => {
     chat.nameChat(nameChat);
-    chat.sleepPageObject();
+    // chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
 

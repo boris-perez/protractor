@@ -41,9 +41,9 @@ describe('Protractor Enter group chat', () => {
     expect(chat.messageInput()).toBe("");
   });
 
-  it('Should go to list conversation', () => {
-    chat.clickBackChat();
-    chat.sleepPageObject();
-    expect(chat.getTitleChat()).toBe(titleChat);
-  });
+  // it('Should go to list conversation', () => {
+  //   chat.clickBackChat();
+  //   chat.sleepPageObject();
+  //   expect(chat.getTitleChat()).toBe(titleChat);
+  // });
 });

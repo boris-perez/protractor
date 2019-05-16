@@ -7,7 +7,6 @@ import {DATA_CONSTANT} from "./chat.constant";
 
 const chat = new Chat();
 const message = DATA_CONSTANT.MESSAGE1;
-const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 
 describe('Protractor send a message', () => {
 
@@ -27,11 +26,5 @@ describe('Protractor send a message', () => {
     chat.clickSendMessage();
     chat.sleepPageObject();
     expect(chat.messageInput()).toBe("");
-  });
-
-  it('Should go to list conversation', () => {
-    chat.clickBackChat();
-    chat.sleepPageObject();
-    expect(chat.getTitleChat()).toBe(titleChat);
   });
 });

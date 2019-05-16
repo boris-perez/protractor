@@ -8,19 +8,16 @@ const chat = new Chat();
 const message = DATA_CONSTANT.MESSAGE2;
 const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 
-describe('Protractor Edit Message', () => {
+describe('Protractor delete Message', () => {
 
   it('Should select the options of message', () => {
-    chat.clickOptionsMessage();
+    chat.clickOptionsMessage3();
     chat.sleepPageObject()
   });
 
-  it('Should Select edit option', () => {
-    chat.clickEditMessage();
-    chat.writeMessageInput(message);
-    chat.clickSendMessage();
+  it('Should Select delete option', () => {
+    chat.clickDeleteMessage();
     chat.sleepPageObject();
-  // expect(chat.getContentAlert()).toBe(alertEdit);
   });
 
   it('Should go to list conversation', () => {

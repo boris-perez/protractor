@@ -24,6 +24,8 @@ export class Chat {
   private _searchContactChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEARCH_INPUT));
   private _sendMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEND_MESSAGE));
   private _optionsMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS));
+  private _optionsMessage2 = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS2));
+  private _optionsMessage3 = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS3));
   private _editMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_EDIT_OPTIONS));
   private _deleteMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_DELETE_OPTION));
   private _replyMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REPLY_OPTION));
@@ -46,6 +48,24 @@ export class Chat {
 
   public sleepPageObject(): void {
     browser.sleep(DATA_CONSTANT.SLEEP_NAVIGATION);
+  }
+
+  public clickOptionsMessage(): void {
+    browser.actions().mouseDown(this._optionsMessage).perform();
+    browser.sleep(5000);
+    browser.actions().mouseUp().perform();
+  }
+
+  public clickOptionsMessage2(): void {
+    browser.actions().mouseDown(this._optionsMessage2).perform();
+    browser.sleep(5000);
+    browser.actions().mouseUp().perform();
+  }
+
+  public clickOptionsMessage3(): void {
+    browser.actions().mouseDown(this._optionsMessage3).perform();
+    browser.sleep(5000);
+    browser.actions().mouseUp().perform();
   }
 
   public selectField(): void {
@@ -86,10 +106,6 @@ export class Chat {
 
   public clickSendMessage(): void {
     this._sendMessage.click();
-  }
-
-  public clickOptionsMessage(): void {
-    this._optionsMessage.click();
   }
 
   public clickEditMessage(): void {
@@ -150,10 +166,6 @@ export class Chat {
 
   public clickReplyMessage(): void {
     this._replyMessage.click();
-  }
-
-  public clickNameChat(): void {
-      this._searchContactChat.sendKeys();
   }
 
   public searchContactChat(text: string): void {

@@ -48,6 +48,13 @@ describe('Protractor create group conversation', () => {
     chat.sleepPageObject();
     expect(chat.messageInput()).toBe("");
   });
+
+  it('Should send a message', () => {
+    chat.clickSendMessage();
+    chat.sleepPageObject();
+    expect(chat.messageInput()).toBe("");
+  });
+
   it('Should go to list conversation', () => {
     chat.clickBackChat();
     chat.sleepPageObject();

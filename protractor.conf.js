@@ -13,7 +13,7 @@ const config = {
 
 const reporter = new HtmlScreenshotReporter({
     dest: 'automation-report/screenshots'
-  , filename: 'social-explanation-report.html'
+  , filename: 'social-services-report.html'
 });
 
 exports.config = {
@@ -24,8 +24,13 @@ exports.config = {
 
     //social-chat
     './e2e/social-chat/create-individualChat.e2e-spec.ts',
+    './e2e/social-chat/send-message-image.e2e-spec.ts',
+    './e2e/social-chat/send-message-docx.e2e-spec.ts',
+    './e2e/social-chat/send-message-pdf.e2e-spec.ts',
     './e2e/social-chat/create-groupChat.e2e-spec.ts',
     './e2e/social-chat/send-message.e2e-spec.ts',
+
+
     './e2e/social-chat/edit-message.e2e-spec.ts',
     './e2e/social-chat/change-privacy.e2e-spec.ts',
     './e2e/social-chat/add-participant.e2e-spec.ts',
@@ -41,6 +46,7 @@ exports.config = {
     './e2e/social-chat/delete-message.e2e-spec.ts',
     './e2e/social-chat/mute-conversation.e2e-spec.ts',
     './e2e/social-chat/add-participant-list-conversation.e2e-spec.ts',
+
     './e2e/social-chat/left-conversation.e2e-spec.ts',
 
     //social-explanation

@@ -20,6 +20,7 @@ export class Chat {
   private _nextChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NEXT));
   private _nameChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NAME));
   private _messageInput = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_INPUT));
+  private _messageInputFile = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_INPUT));
   private _selectConversation = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_CONVERSATION));
   private _searchContactChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEARCH_INPUT));
   private _sendMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEND_MESSAGE));
@@ -43,6 +44,7 @@ export class Chat {
   private _infoGroup = element(by.css(HTML_ELEMENT.CHAT_POPOVER.TITLE));
   private _tileChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.TITLE_CHAT));
 
+
   /* LUCY ALERT */
   private _alert = element(by.css(HTML_ELEMENT.LUCY_ALERT));
 
@@ -52,19 +54,19 @@ export class Chat {
 
   public clickOptionsMessage(): void {
     browser.actions().mouseDown(this._optionsMessage).perform();
-    browser.sleep(5000);
+    browser.sleep(3000);
     browser.actions().mouseUp().perform();
   }
 
   public clickOptionsMessage2(): void {
-    browser.actions().mouseDown(this._optionsMessage2).perform();
-    browser.sleep(5000);
+    browser.actions().mouseDown(this._optionsMessage3).perform();
+    browser.sleep(3000);
     browser.actions().mouseUp().perform();
   }
 
   public clickOptionsMessage3(): void {
     browser.actions().mouseDown(this._optionsMessage3).perform();
-    browser.sleep(5000);
+    browser.sleep(3000);
     browser.actions().mouseUp().perform();
   }
 
@@ -148,6 +150,10 @@ export class Chat {
     this._addOption.click();
   }
 
+  public clickInput(): void{
+    this._messageInput.click();
+  }
+
   public clickLeftOption(): void {
     this._leftOption.click();
   }
@@ -178,6 +184,10 @@ export class Chat {
 
   public writeMessageInput(text: string): void {
     this._messageInput.sendKeys(text);
+  }
+
+  public messageFile(file):void{
+    this._messageInputFile.sendKeys(file);
   }
 
   public messageInput () : any {

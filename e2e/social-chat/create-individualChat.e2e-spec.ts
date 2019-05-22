@@ -11,6 +11,7 @@ const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 describe('Protractor create an individual chat', () => {
 
   it('Should select a field', () => {
+    chat.sleepPageObject();
     chat.selectField();
   });
 

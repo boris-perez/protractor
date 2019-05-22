@@ -8,7 +8,7 @@ import {DATA_CONSTANT} from "./chat.constant";
 const chat = new Chat();
 const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 
-describe('Protractor Add participant', () => {
+describe('Protractor Add participant from list conversation', () => {
 
   it('Should conversation options', () => {
     chat.clickArrowRight();
@@ -16,7 +16,7 @@ describe('Protractor Add participant', () => {
     expect(chat.getTitleChat()).toBe(titleChat);
   });
 
-  it('Should Select add participant', () => {
+  it('Should Select add participant from list conversation', () => {
     chat.clickAddParticipantListConversation();
     chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);

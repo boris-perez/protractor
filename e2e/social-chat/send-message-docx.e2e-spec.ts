@@ -4,12 +4,15 @@
 
 import {Chat} from './chat.po';
 import {DATA_CONSTANT} from "./chat.constant";
+const path = require ('path');
+const fileToUpload = '../resources/DocumentTest.docx';
+const absolutePath = path.resolve(__dirname, fileToUpload);
+
 
 const chat = new Chat();
 const message = DATA_CONSTANT.MESSAGE1;
 
-
-describe('Protractor send a message', () => {
+describe('Protractor send a message document type', () => {
 
   // it('Should select a conversation', () => {
   //   chat.clickSelectConversation();
@@ -18,7 +21,9 @@ describe('Protractor send a message', () => {
   // });
 
   it('Should write a message', () => {
-    chat.writeMessageInput(message);
+  //  chat.clickInput();
+    chat.sleepPageObject();
+    chat.messageFile(absolutePath);
     chat.sleepPageObject();
     expect(chat.messageInput()).toBe("");
   });
@@ -33,5 +38,5 @@ describe('Protractor send a message', () => {
   //   chat.clickBackChat();
   //   chat.sleepPageObject();
   //   //expect(chat.getTitleChat()).toBe(titleChat);
-  //});
+  // });
 });

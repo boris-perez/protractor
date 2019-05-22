@@ -3,34 +3,28 @@
  */
 
 import {Chat} from './chat.po';
-import {DATA_CONSTANT} from './chat.constant';
+import {DATA_CONSTANT} from "./chat.constant";
+
+const path = require ('path');
+const fileToUpload = '../resources/image.png';
+const absolutePath = path.resolve(__dirname, fileToUpload);
 
 const chat = new Chat();
-const message = DATA_CONSTANT.MESSAGE2;
-const titleChat =  DATA_CONSTANT.TITLE_CHAT;
+const message = DATA_CONSTANT.MESSAGE1;
 
-describe('Protractor Enter group chat', () => {
-
-  it('Should select a field', () => {
-    chat.selectField();
-    chat.sleepPageObject();
-  });
-
-  it('Should open chat icon', () => {
-    chat.openChat();
-    chat.sleepPageObject();
-    expect(chat.getTitleChat()).toBe(titleChat);
-  });
+describe('Protractor send a message image type', () => {
 
   it('Should select a conversation', () => {
-    chat.sleepPageObject();
     chat.clickSelectConversation();
     chat.sleepPageObject();
     expect(chat.messageInput()).toBe("");
   });
 
   it('Should write a message', () => {
-    chat.writeMessageInput(message);
+  //  chat.clickInput();
+    chat.sleepPageObject();
+    chat.sleepPageObject();
+    chat.messageFile(absolutePath);
     chat.sleepPageObject();
     expect(chat.messageInput()).toBe("");
   });
@@ -44,6 +38,6 @@ describe('Protractor Enter group chat', () => {
   // it('Should go to list conversation', () => {
   //   chat.clickBackChat();
   //   chat.sleepPageObject();
-  //   expect(chat.getTitleChat()).toBe(titleChat);
+  //   //expect(chat.getTitleChat()).toBe(titleChat);
   // });
 });

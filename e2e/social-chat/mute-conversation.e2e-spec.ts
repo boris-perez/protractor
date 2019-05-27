@@ -11,7 +11,7 @@ const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 describe('Mute conversation', () => {
 
   it('Should conversation options', () => {
-    chat.clickArrowRight();
+    chat.clickArrow();
     chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
@@ -23,7 +23,7 @@ describe('Mute conversation', () => {
   });
 
   it('Should close conversation options', () => {
-    chat.clickArrowLeft();
+    chat.clickArrow();
     chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });

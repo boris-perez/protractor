@@ -2,19 +2,6 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
-const {AwesomeReport} = require('jasmine-awesome-report');
-const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
-
-const config = {
-  fullPath: 'awesome-report',
-  fileName: 'report',
-  merge: true
-};
-
-const reporter = new HtmlScreenshotReporter({
-    dest: 'automation-report/screenshots'
-  , filename: 'social-services-report.html'
-});
 
 exports.config = {
   specs: [
@@ -47,7 +34,7 @@ exports.config = {
     './e2e/social-chat/mute-conversation.e2e-spec.ts',
     './e2e/social-chat/add-participant-list-conversation.e2e-spec.ts',
 
-    './e2e/social-chat/left-conversation.e2e-spec.ts',
+    './e2e/social-chat/left-conversation.e2e-spec.ts'
 
     //social-explanation
     // './e2e/social-explanation/createExplanations.e2e-spec.ts',
@@ -65,20 +52,9 @@ exports.config = {
   },
 
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  baseUrl: 'http://172.16.4.88:8000/',
+  //baseUrl: 'http://172.16.4.88:8000/',
+  baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
-
-  beforeLaunch: function () {
-    return new Promise(function (resolve) {
-      reporter.beforeLaunch(resolve);
-    });
-  },
-
-  afterLaunch: function (exitCode) {
-    return new Promise(function (resolve) {
-      reporter.afterLaunch(resolve.bind(this, exitCode));
-    });
-  },
 
   onPrepare: function () {
     browser.manage().timeouts().implicitlyWait(6000);
@@ -87,10 +63,5 @@ exports.config = {
       project: 'e2e/tsconfig.e2e.json'
     });
     jasmine.getEnv().addReporter(new SpecReporter({spec: {displayStacktrace: true}}));
-    jasmine.getEnv().addReporter(AwesomeReport.getReport(config));
-    jasmine.getEnv().addReporter(reporter);
-    afterAll(function (done) {
-      process.nextTick(done);
-    })
   }
 };

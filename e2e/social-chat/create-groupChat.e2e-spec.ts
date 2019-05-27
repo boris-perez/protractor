@@ -26,7 +26,7 @@ describe('Protractor create group conversation', () => {
   });
 
   it('Should select a contact', () => {
-    chat.clickSelectContact();
+    chat.clickSelectContact1();
     // chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });

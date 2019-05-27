@@ -18,6 +18,7 @@ describe('Protractor add participant', () => {
   });
 
   it('Should select the name of conversation', () => {
+    chat.sleepPageObject();
     chat.clickNameConversation();
     chat.sleepPageObject();
     expect(chat.getInfoGroup()).toBe(title);

@@ -8,45 +8,38 @@ import {DATA_CONSTANT, HTML_ELEMENT} from './chat.constant';
 export class Chat {
 
   /* FIELD SHORTCUT */
-  private _field = element(by.css(HTML_ELEMENT.FIELD_SHORTCUT.FIRST_FIELD));
-  private _openChat = element(by.css(HTML_ELEMENT.FIELD_SHORTCUT.CHAT_ICON));
+  private _field = element(by.id(HTML_ELEMENT.FIELD_SHORTCUT.FIRST_FIELD));
+  private _chatOpen = element(by.id(HTML_ELEMENT.FIELD_SHORTCUT.CHAT_ICON));
 
   /* CHAT POPOVER */
-  private _newChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NEW));
-  private _skipChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SKIP));
-  private _selectContact = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_CONTACT));
-  private _createChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_CREATE));
-  private _backChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_BACK));
-  private _nextChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NEXT));
-  private _nameChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NAME));
+  private _chatNew = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_NEW));
+  private _chatSkip = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SKIP));
+  private _chatSelectContact = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_CONTACT));
+  private _chatSelectContact1 = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_CONTACT1));
+  private _chatCreate = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_CREATE));
+  private _chatBack = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_BACK));
+  private _nameChat = element(by.className(HTML_ELEMENT.CHAT_POPOVER.CHAT_NAME));
   private _messageInput = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_INPUT));
   private _messageInputFile = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_INPUT));
-  private _selectConversation = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_CONVERSATION));
-  private _searchContactChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEARCH_INPUT));
-  private _sendMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEND_MESSAGE));
-  private _optionsMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS));
-  private _optionsMessage2 = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS2));
-  private _optionsMessage3 = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS3));
-  private _editMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_EDIT_OPTIONS));
-  private _deleteMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_DELETE_OPTION));
-  private _replyMessage = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REPLY_OPTION));
-  private _arrowLeft = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ARROW_LEFT));
-  private _arrowRight = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ARROW_RIGHT));
-  private _privacy = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_PRIVACY));
-  private _mute = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_MUTE));
-  private _addParticipantListConversation = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD_PARTICIPANT));
-  private _addParticipant = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD_PARTICIPANT1));
-  private _addOption = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD));
-  private _leftOption = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_LEFT));
-  private _removeOption = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REMOVE_USER));
-  private _removeUser = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_REMOVE));
-  private _nameConversation = element(by.css(HTML_ELEMENT.CHAT_POPOVER.CHAT_NAME_CONVERSATION));
-  private _infoGroup = element(by.css(HTML_ELEMENT.CHAT_POPOVER.TITLE));
-  private _tileChat = element(by.css(HTML_ELEMENT.CHAT_POPOVER.TITLE_CHAT));
-
-
-  /* LUCY ALERT */
-  private _alert = element(by.css(HTML_ELEMENT.LUCY_ALERT));
+  private _selectConversation = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_CONVERSATION));
+  private _searchContactChat = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEARCH_INPUT));
+  private _sendMessage = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SEND_MESSAGE));
+  private _optionsMessage = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS));
+  private _optionsMessage3 = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_MESSAGE_OPTIONS3));
+  private _editMessage = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_EDIT_OPTIONS));
+  private _deleteMessage = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_DELETE_OPTION));
+  private _replyMessage = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_REPLY_OPTION));
+  private _arrowMenu = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_MENU_ARROW));
+  private _arrowMenuOption = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_ARROW));
+  private _privacy = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_PRIVACY));
+  private _mute = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_MUTE));
+  private _addParticipantListConversation = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD_PARTICIPANT));
+  private _addParticipant = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD_PARTICIPANT1));
+  private _addOption = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_ADD));
+  private _leftOption = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_LEFT));
+  private _removeOption = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_SELECT_PARTICIPANT));
+  private _removeUser = element(by.id(HTML_ELEMENT.CHAT_POPOVER.CHAT_REMOVE_PARTICIPANT));
+  private _chatName = element(by.id(HTML_ELEMENT.CHAT_POPOVER.TITLE_CHAT));
 
   public sleepPageObject(): void {
     browser.sleep(DATA_CONSTANT.SLEEP_NAVIGATION);
@@ -75,31 +68,35 @@ export class Chat {
   }
 
   public openChat(): void {
-    this._openChat.click();
+    this._chatOpen.click();
   }
 
   public clickNewChat(): void {
-    this._newChat.click();
+    this._chatNew.click();
   }
 
   public clickSkipChat(): void {
-    this._skipChat.click();
+    this._chatSkip.click();
   }
 
   public clickBackChat(): void {
-    this._backChat.click();
+    this._chatBack.click();
   }
 
   public clickCreateChat(): void {
-    this._createChat.click();
+    this._chatCreate.click();
   }
 
   public clickSelectContact(): void {
-    this._selectContact.click();
+    this._chatSelectContact.click();
+  };
+
+  public clickSelectContact1(): void {
+    this._chatSelectContact1.click();
   };
 
   public clickNextChat(): void {
-    this._nextChat.click();
+    this._chatSkip.click();
   };
 
   public clickSelectConversation(): void {
@@ -115,19 +112,14 @@ export class Chat {
     this._messageInput.clear();
   }
 
-  public clickArrowRight(): void{
+  public clickArrow(): void{
     browser.actions().mouseMove(this._selectConversation).perform();
-    this._arrowRight.click();
-  }
-
-  public clickArrowLeft(): void{
-    browser.actions().mouseMove(this._selectConversation).perform();
-    this._arrowLeft.click();
+    this._arrowMenu.click();
   }
 
   public clickArrowRightRemove(): void{
     browser.actions().mouseMove(this._removeOption).perform();
-    this._arrowRight.click();
+    this._arrowMenuOption.click();
   }
 
   public clickRemoveOption(): void{
@@ -150,16 +142,12 @@ export class Chat {
     this._addOption.click();
   }
 
-  public clickInput(): void{
-    this._messageInput.click();
-  }
-
   public clickLeftOption(): void {
     this._leftOption.click();
   }
 
   public clickNameConversation(): void {
-    this._nameConversation.click();
+    this._chatName.click();
   }
 
   public clickAddParticipant(): void {
@@ -195,16 +183,13 @@ export class Chat {
   }
 
   public getInfoGroup () : any {
-    return this._infoGroup.getText();
+    return this._chatName.getText();
   }
 
   public getTitleChat () : any {
-    return this._tileChat.getText();
+    return this._chatName.getText();
   }
 
-  public getContentAlert(): any {
-    return this._alert.getText();
-  }
 }
 
 

@@ -11,7 +11,7 @@ const titleChat =  DATA_CONSTANT.TITLE_CHAT;
 describe('Protractor left conversation', () => {
 
   it('Should conversation options', () => {
-    chat.clickArrowRight();
+    chat.clickArrow();
     chat.sleepPageObject();
     expect(chat.getTitleChat()).toBe(titleChat);
   });
